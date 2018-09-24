@@ -7,7 +7,7 @@ export default class Forecast extends React.Component {
   }
   render() {
     return (
-      <View>
+      <View  style={styles.container}>
         <Text>{this.props.main}</Text>
         <Text>{this.props.dascription}</Text>
         <Text>{this.props.temp}</Text>
@@ -19,9 +19,6 @@ export default class Forecast extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    flexDirection:'row',
+    justifyContent:'center'},
 });
