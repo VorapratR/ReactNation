@@ -1,10 +1,10 @@
 import React from 'react';
 import Weather from './components/Weather';
-import Forcast from './components/Forcast';
+//import Forcast from './components/Forecast';
 export default class App extends React.Component {
   render() {
     return (
-      <Forcast main="Voraprat" dascription="5910110288" temp="25"/>
+      <Weather zipCode="90110"/>
     );
   }
 }
