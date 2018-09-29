@@ -1,30 +1,34 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default class Forecast extends React.Component {
-  doIt =()=> {
-    console.log("Hello from console")
-  }
-  render() {
-    return (
-      <View>
-        <Text style={styles.font}>{this.props.main}</Text>
-        <Text style={styles.font}>{this.props.dascription}</Text>
-        <Text style={styles.font}>{this.props.temp}</Text>
-        <Text style={styles.font}>C</Text>
-      </View>
-    );
-  }
+export default class Forecast extends React.Component{
+    render(){
+        return (
+            <View >
+                <Text style={styles.mainStyle}>{this.props.main}</Text>
+                <Text style={styles.descriptionStyle}>{this.props.description}</Text>
+                <Text style={styles.tempStyle}>{this.props.temp}  ํC</Text>
+            </View>
+        );
+    }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flexDirection:'row',
-    justifyContent:'center'
-  },
-  font:{
-    paddingTop:20,
-    color:'#fff',
-    fontSize: 25
-  }
-});
+
+    mainStyle : {
+        paddingTop : 20,
+        color : '#fff',
+        fontSize : 40,
+    },
+    descriptionStyle : {
+        paddingTop : 20,
+        color : '#fff',
+        fontSize : 20,
+    },
+    tempStyle : {
+        paddingTop : 20,
+        color : '#fff',
+        fontSize : 30,
+    }
+
+  });
